@@ -1,5 +1,8 @@
 # 🔧 LabGuard+ – Intelligent IoT-Based Lab Monitoring & Control System
 
+## 👨‍💻 **Author**
+**Soumy** - IoT Developer & Embedded Systems Engineer
+
 ## 📋 Project Overview
 
 **LabGuard+** is an advanced Internet of Things (IoT)-based safety and automation system designed for real-time monitoring and control of laboratory environments. The system integrates multiple environmental sensors, dual microcontrollers (ESP8266 & ESP32), and a smart web-based dashboard with remote access and Telegram alerts.

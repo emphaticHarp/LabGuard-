@@ -1,5 +1,6 @@
 // LabGuard+ ESP32 - Modern Dashboard with Live Data
 // --------------------------------------------------
+// Author: Soumy - IoT Developer & Embedded Systems Engineer
 // Features:
 // - Serves beautiful custom HTML dashboard
 // - REST API endpoints for live sensor and relay data

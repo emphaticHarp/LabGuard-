@@ -1,5 +1,6 @@
 // LabGuard+ ESP8266 Code - Final Version
 // --------------------------------------------------
+// Author: Soumy - IoT Developer & Embedded Systems Engineer
 // ➤ Connects to Wi-Fi
 // ➤ Communicates with ESP32 via TCP
 // ➤ Reads data from sensors
