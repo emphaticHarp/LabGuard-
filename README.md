@@ -84,18 +84,18 @@
 | Reset Button | D10 (GPIO 16) | Manual reset |
 
 ### 💻 ESP32 (Controller)
-| Output Device | GPIO Pin | Purpose |
-|---------------|----------|---------|
-| I2C LCD SDA | GPIO 21 | LCD data line |
-| I2C LCD SCL | GPIO 22 | LCD clock line |
-| Relay 1 (Exhaust Fan) | GPIO 14 (D5) | Gas leak response |
-| Relay 2 (Room Light) | GPIO 27 (D4) | Motion/presence response |
-| Relay 3 (Cooling Fan) | GPIO 26 (D3) | High temperature response |
-| Relay 4 (Buzzer) | GPIO 25 (D2) | Sound/IR alert |
-| RED LED | GPIO 32 (D13) | Wi-Fi failure indicator |
-| WHITE LED | GPIO 33 (D12) | Wi-Fi connected indicator |
-| GREEN LED | GPIO 12 (D14) | ESP8266 communication OK |
-| Reset Button | GPIO 15 | Manual reset |
+| Output Device | D Pin | GPIO Pin | Purpose |
+|---------------|-------|----------|---------|
+| I2C LCD SDA | D21 | GPIO 21 | LCD data line |
+| I2C LCD SCL | D22 | GPIO 22 | LCD clock line |
+| Relay 1 (Exhaust Fan) | D14 | GPIO 14 | Gas leak response |
+| Relay 2 (Room Light) | D27 | GPIO 27 | Motion/presence response |
+| Relay 3 (Cooling Fan) | D26 | GPIO 26 | High temperature response |
+| Relay 4 (Buzzer) | D25 | GPIO 25 | Sound/IR alert |
+| RED LED | D32 | GPIO 32 | Wi-Fi failure indicator |
+| WHITE LED | D33 | GPIO 33 | Wi-Fi connected indicator |
+| GREEN LED | D12 | GPIO 12 | ESP8266 communication OK |
+| Reset Button | D15 | GPIO 15 | Manual reset |
 
 ## 🔌 Detailed Wiring Instructions
 
@@ -159,8 +159,8 @@ GND                →    All component GND pins
 #### I2C LCD Connections
 ```
 ESP32 Pin    →    LCD Pin    →    Description
-GPIO21       →    SDA        →    I2C Data
-GPIO22       →    SCL        →    I2C Clock
+D21          →    SDA        →    I2C Data
+D22          →    SCL        →    I2C Clock
 3.3V         →    VCC        →    Power
 GND          →    GND        →    Ground
 ```
@@ -168,18 +168,18 @@ GND          →    GND        →    Ground
 #### Relay Module Connections
 ```
 ESP32 Pin    →    Relay Pin    →    Description
-GPIO14       →    IN1         →    Relay 1 (Exhaust Fan)
-GPIO27       →    IN2         →    Relay 2 (Room Light)
-GPIO26       →    IN3         →    Relay 3 (Cooling Fan)
-GPIO25       →    IN4         →    Relay 4 (Buzzer)
+D14          →    IN1         →    Relay 1 (Exhaust Fan)
+D27          →    IN2         →    Relay 2 (Room Light)
+D26          →    IN3         →    Relay 3 (Cooling Fan)
+D25          →    IN4         →    Relay 4 (Buzzer)
 ```
 
 #### LED Connections (with 220Ω resistors)
 ```
 ESP32 Pin    →    LED Color    →    Resistor    →    Description
-GPIO32       →    Red LED      →    220Ω        →    Wi-Fi failure
-GPIO33       →    White LED    →    220Ω        →    Wi-Fi connected
-GPIO12       →    Green LED    →    220Ω        →    ESP8266 communication
+D32          →    Red LED      →    220Ω        →    Wi-Fi failure
+D33          →    White LED    →    220Ω        →    Wi-Fi connected
+D12          →    Green LED    →    220Ω        →    ESP8266 communication
 ```
 
 ## 🚀 Setup Instructions
@@ -324,7 +324,7 @@ pio run -e esp32_controller -t upload
 
 5. **I2C LCD Not Displaying**
    - Check I2C address (default: 0x27)
-   - Verify SDA/SCL connections (GPIO21/22)
+   - Verify SDA/SCL connections (D21/D22)
    - Check power supply (3.3V)
    - Use I2C scanner to find correct address
 
@@ -346,7 +346,7 @@ pio run -e esp32_controller -t upload
 - **Line 2**: Shows ESP8266 connection status and IP
 - **Updates**: Every 2 seconds automatically
 - **I2C Address**: Default 0x27 (change if needed)
-- **Connections**: SDA→GPIO21, SCL→GPIO22
+- **Connections**: SDA→D21, SCL→D22
 
 ## 📊 System Specifications
 
